@@ -3,7 +3,7 @@
 //  ios_codepath
 //
 //  Created by Timothy Lee on 7/30/15.
-//  Copyright (c) 2015 Timothy Lee. All rights reserved.
+//  Copyright (c) 2015 CodePath. All rights reserved.
 //
 
 import UIKit
@@ -15,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        Parse.setApplicationId("0WdAoDlfFas3rwS1HCKpW2mXgmS6RO9oGes742SE", clientKey: "vO6YY38d2I9Ij0RB1d2ReIl0LJfeK22Ga81HSrsY")
+        
         return true
     }
 
