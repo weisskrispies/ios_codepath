@@ -21,6 +21,7 @@
 		22B680681B6B0FD900963A42 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22B680671B6B0FD900963A42 /* Images.xcassets */; };
 		22B6806B1B6B0FD900963A42 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22B680691B6B0FD900963A42 /* LaunchScreen.xib */; };
 		22B680771B6B0FDA00963A42 /* ios_codepathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B680761B6B0FDA00963A42 /* ios_codepathTests.swift */; };
+		22FED8231B769ACD00CE81BD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FED8221B769ACD00CE81BD /* LoginViewController.swift */; };
 		3346509DBE8C09C656FDE165 /* libPods-ios_codepath.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD36AEAA9D946CA8CB19319 /* libPods-ios_codepath.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		22B680701B6B0FD900963A42 /* ios_codepathTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ios_codepathTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B680751B6B0FDA00963A42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22B680761B6B0FDA00963A42 /* ios_codepathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_codepathTests.swift; sourceTree = "<group>"; };
+		22FED8221B769ACD00CE81BD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		739718EE5CB351F4BE1FFF48 /* Pods-ios_codepath.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_codepath.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios_codepath/Pods-ios_codepath.debug.xcconfig"; sourceTree = "<group>"; };
 		959424332EA17F8CE8C7271A /* Pods-ios_codepath.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_codepath.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios_codepath/Pods-ios_codepath.release.xcconfig"; sourceTree = "<group>"; };
 		AAD36AEAA9D946CA8CB19319 /* libPods-ios_codepath.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ios_codepath.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +99,7 @@
 		22439CC91B7047020017E76B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				22FED8221B769ACD00CE81BD /* LoginViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				22439CBA1B7045830017E76B /* Feed.swift in Sources */,
 				22439CCC1B704F4A0017E76B /* User.swift in Sources */,
 				22B680611B6B0FD900963A42 /* AppDelegate.swift in Sources */,
+				22FED8231B769ACD00CE81BD /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
