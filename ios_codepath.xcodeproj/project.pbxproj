@@ -18,6 +18,12 @@
 		22439CCC1B704F4A0017E76B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22439CCB1B704F4A0017E76B /* User.swift */; };
 		22A8AD4D1B769D0E0058C2BB /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A8AD4C1B769D0E0058C2BB /* FeedViewController.swift */; };
 		22A8AD4F1B769D150058C2BB /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A8AD4E1B769D150058C2BB /* FeedCell.swift */; };
+		22A8AD511B769EA40058C2BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A8AD501B769EA40058C2BB /* ViewController.swift */; };
+		22A8AD561B769EAE0058C2BB /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A8AD521B769EAE0058C2BB /* EditProfileViewController.swift */; };
+		22A8AD571B769EAE0058C2BB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A8AD531B769EAE0058C2BB /* ProfileViewController.swift */; };
+		22A8AD581B769EAE0058C2BB /* CurrentWeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A8AD541B769EAE0058C2BB /* CurrentWeekViewController.swift */; };
+		22A8AD591B769EAE0058C2BB /* CourseOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A8AD551B769EAE0058C2BB /* CourseOverviewViewController.swift */; };
+		22A8AD5B1B769EB40058C2BB /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A8AD5A1B769EB40058C2BB /* CourseCell.swift */; };
 		22B680611B6B0FD900963A42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B680601B6B0FD900963A42 /* AppDelegate.swift */; };
 		22B680661B6B0FD900963A42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22B680641B6B0FD900963A42 /* Main.storyboard */; };
 		22B680681B6B0FD900963A42 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22B680671B6B0FD900963A42 /* Images.xcassets */; };
@@ -50,6 +56,12 @@
 		22439CCB1B704F4A0017E76B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		22A8AD4C1B769D0E0058C2BB /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		22A8AD4E1B769D150058C2BB /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		22A8AD501B769EA40058C2BB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		22A8AD521B769EAE0058C2BB /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		22A8AD531B769EAE0058C2BB /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		22A8AD541B769EAE0058C2BB /* CurrentWeekViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeekViewController.swift; sourceTree = "<group>"; };
+		22A8AD551B769EAE0058C2BB /* CourseOverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseOverviewViewController.swift; sourceTree = "<group>"; };
+		22A8AD5A1B769EB40058C2BB /* CourseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 		22B6805B1B6B0FD900963A42 /* ios_codepath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_codepath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B6805F1B6B0FD900963A42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22B680601B6B0FD900963A42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,8 +115,13 @@
 		22439CC91B7047020017E76B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				22A8AD501B769EA40058C2BB /* ViewController.swift */,
 				22FED8221B769ACD00CE81BD /* LoginViewController.swift */,
 				22A8AD4C1B769D0E0058C2BB /* FeedViewController.swift */,
+				22A8AD521B769EAE0058C2BB /* EditProfileViewController.swift */,
+				22A8AD531B769EAE0058C2BB /* ProfileViewController.swift */,
+				22A8AD541B769EAE0058C2BB /* CurrentWeekViewController.swift */,
+				22A8AD551B769EAE0058C2BB /* CourseOverviewViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -113,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				22A8AD4E1B769D150058C2BB /* FeedCell.swift */,
+				22A8AD5A1B769EB40058C2BB /* CourseCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -334,14 +352,20 @@
 				22A8AD4F1B769D150058C2BB /* FeedCell.swift in Sources */,
 				22439CC01B7045D80017E76B /* Topic.swift in Sources */,
 				22439CC81B7046160017E76B /* Rating.swift in Sources */,
+				22A8AD511B769EA40058C2BB /* ViewController.swift in Sources */,
 				22439CC61B70460F0017E76B /* CheckIn.swift in Sources */,
+				22A8AD571B769EAE0058C2BB /* ProfileViewController.swift in Sources */,
 				22439CC21B7045E00017E76B /* Cohort.swift in Sources */,
 				22439CBE1B7045C80017E76B /* Course.swift in Sources */,
+				22A8AD561B769EAE0058C2BB /* EditProfileViewController.swift in Sources */,
+				22A8AD581B769EAE0058C2BB /* CurrentWeekViewController.swift in Sources */,
 				22439CC41B7045F60017E76B /* CourseRecord.swift in Sources */,
 				22439CBA1B7045830017E76B /* Feed.swift in Sources */,
 				22439CCC1B704F4A0017E76B /* User.swift in Sources */,
+				22A8AD5B1B769EB40058C2BB /* CourseCell.swift in Sources */,
 				22B680611B6B0FD900963A42 /* AppDelegate.swift in Sources */,
 				22A8AD4D1B769D0E0058C2BB /* FeedViewController.swift in Sources */,
+				22A8AD591B769EAE0058C2BB /* CourseOverviewViewController.swift in Sources */,
 				22FED8231B769ACD00CE81BD /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
