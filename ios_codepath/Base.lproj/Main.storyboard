@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="34N-Gu-UOM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="kKs-40-dfb">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -818,14 +818,393 @@
             </objects>
             <point key="canvasLocation" x="858" y="687"/>
         </scene>
+        <!--Classmates View Controller-->
+        <scene sceneID="JCk-gW-Kcp">
+            <objects>
+                <viewController id="kKs-40-dfb" customClass="ClassmatesViewController" customModule="Codepath_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DZC-cL-MDS"/>
+                        <viewControllerLayoutGuide type="bottom" id="lFh-Gr-bUD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bf5-w2-2gF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="87" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="aJ2-qa-hPX">
+                                <rect key="frame" x="0.0" y="85" width="320" height="587"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="classmatesTableViewCell" rowHeight="87" id="rK5-oo-9vu" customClass="classmatesTableViewCell" customModule="Codepath_1" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rK5-oo-9vu" id="TYW-Ye-AGL">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="8v0-yP-xAI" appends="YES" id="7wJ-N9-yJH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="THH-oV-AkZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xZP-I9-lyH">
+                                        <rect key="frame" x="0.0" y="67" width="320" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Classmates" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTw-TO-zT0">
+                                        <rect key="frame" x="115" y="32" width="90" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" misplaced="YES" image="close_grey_button" translatesAutoresizingMaskIntoConstraints="NO" id="ZwJ-dO-0Dq">
+                                        <rect key="frame" x="25" y="35" width="16" height="16"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="fTw-TO-zT0" secondAttribute="centerY" id="8W9-Yg-Wb3"/>
+                                    <constraint firstAttribute="bottom" secondItem="xZP-I9-lyH" secondAttribute="bottom" id="Dj0-ub-Hfu"/>
+                                    <constraint firstAttribute="centerX" secondItem="fTw-TO-zT0" secondAttribute="centerX" id="TtV-yw-kL7"/>
+                                    <constraint firstItem="xZP-I9-lyH" firstAttribute="leading" secondItem="THH-oV-AkZ" secondAttribute="leading" id="Vay-OZ-Se2"/>
+                                    <constraint firstItem="ZwJ-dO-0Dq" firstAttribute="leading" secondItem="THH-oV-AkZ" secondAttribute="leading" constant="25" id="d5i-Tw-9ba"/>
+                                    <constraint firstAttribute="trailing" secondItem="xZP-I9-lyH" secondAttribute="trailing" id="rAS-sO-1GN"/>
+                                    <constraint firstAttribute="width" secondItem="THH-oV-AkZ" secondAttribute="height" multiplier="64:17" id="y3d-7d-2EM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="aJ2-qa-hPX" secondAttribute="trailing" constant="-16" id="Chc-nm-qNf"/>
+                            <constraint firstItem="aJ2-qa-hPX" firstAttribute="leading" secondItem="bf5-w2-2gF" secondAttribute="leadingMargin" constant="-16" id="U5t-Ac-OhO"/>
+                            <constraint firstItem="THH-oV-AkZ" firstAttribute="leading" secondItem="bf5-w2-2gF" secondAttribute="leadingMargin" constant="-16" id="kVd-bG-xaT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="THH-oV-AkZ" secondAttribute="trailing" constant="-16" id="z5M-PK-1wY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="headerView" destination="THH-oV-AkZ" id="QjJ-Q1-aZx"/>
+                        <outlet property="tableView" destination="aJ2-qa-hPX" id="ZgG-fG-N4j"/>
+                        <segue destination="Uqo-vz-Eyg" kind="modal" identifier="classmatesTable2DetailSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Y2U-ka-zUx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mpy-OR-TRd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="8v0-yP-xAI">
+                    <connections>
+                        <action selector="onTapCell:" destination="kKs-40-dfb" id="aBS-Eb-hjN"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-94" y="2317"/>
+        </scene>
+        <!--Classmate Detail View Controller-->
+        <scene sceneID="rpw-u9-MHS">
+            <objects>
+                <viewController storyboardIdentifier="details" id="Uqo-vz-Eyg" customClass="classmateDetailViewController" customModule="Codepath_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rHQ-Wb-zL1"/>
+                        <viewControllerLayoutGuide type="bottom" id="SoM-6k-bPl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WZT-zI-fms">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YmH-Og-g9k" userLabel="overlayBackground">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Classmates" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOn-Xj-AsA">
+                                        <rect key="frame" x="115" y="30" width="90" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" misplaced="YES" image="close" translatesAutoresizingMaskIntoConstraints="NO" id="Mkx-u5-7nU">
+                                        <rect key="frame" x="25" y="32.5" width="16" height="16"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="0BX-KD-fbZ" appends="YES" id="hMb-AA-usF"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Mkx-u5-7nU" firstAttribute="leading" secondItem="YmH-Og-g9k" secondAttribute="leading" constant="25" id="2AH-sm-y8I"/>
+                                    <constraint firstAttribute="centerX" secondItem="AOn-Xj-AsA" secondAttribute="centerX" id="LVs-e6-v1b"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="78K-fk-9Oo" userLabel="First Card View">
+                                <rect key="frame" x="42" y="98" width="236" height="370"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Github" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DP0-sO-ewm" userLabel="gitLabel">
+                                        <rect key="frame" x="25" y="165" width="186" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="github username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIE-aL-Ga3" userLabel="gitName">
+                                        <rect key="frame" x="25" y="185" width="271" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nwm-Be-8u6" userLabel="emailLabel">
+                                        <rect key="frame" x="25" y="228" width="109" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXY-Zf-xdo" userLabel="emailAddress">
+                                        <rect key="frame" x="25" y="248" width="117" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Achievements" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rc-4F-fai" userLabel="achievementsLabel">
+                                        <rect key="frame" x="25" y="280" width="109" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tom Lee" translatesAutoresizingMaskIntoConstraints="NO" id="foR-sY-zug" userLabel="classmatePhotoImage">
+                                        <rect key="frame" x="85" y="18" width="66" height="66"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Classmate Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYL-oa-V16" userLabel="classmateName">
+                                        <rect key="frame" x="-20" y="95" width="277" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KDB-ch-iTc">
+                                        <rect key="frame" x="0.0" y="154" width="236" height="1"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LXp-EA-r1t">
+                                        <rect key="frame" x="0.0" y="219" width="236" height="1"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uuY-LJ-Fl6">
+                                        <rect key="frame" x="0.0" y="274" width="236" height="1"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="android_icon" translatesAutoresizingMaskIntoConstraints="NO" id="MCN-5s-8tl">
+                                        <rect key="frame" x="25" y="306" width="45" height="52"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ios_icon" translatesAutoresizingMaskIntoConstraints="NO" id="prS-44-DIj">
+                                        <rect key="frame" x="87" y="306" width="45" height="53"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Job Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spd-7F-2zW" userLabel="jobTitle">
+                                        <rect key="frame" x="-20" y="124" width="277" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QCj-jd-pms" userLabel="Second Card View">
+                                <rect key="frame" x="302" y="98" width="236" height="370"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Github" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvy-fF-RfA" userLabel="gitLabel">
+                                        <rect key="frame" x="25" y="165" width="186" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="github username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9MK-fV-yXI" userLabel="gitName">
+                                        <rect key="frame" x="25" y="185" width="271" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2L-gY-Q5a" userLabel="emailLabel">
+                                        <rect key="frame" x="25" y="218" width="109" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxZ-em-Pq0" userLabel="emailAddress">
+                                        <rect key="frame" x="25" y="238" width="117" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Achievements" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84D-Xb-sdv" userLabel="achievementsLabel">
+                                        <rect key="frame" x="25" y="270" width="109" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tom Lee" translatesAutoresizingMaskIntoConstraints="NO" id="CSD-6e-xKH" userLabel="classmatePhotoImage">
+                                        <rect key="frame" x="85" y="18" width="66" height="66"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Classmate Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7Z-f5-XB2" userLabel="classmateName">
+                                        <rect key="frame" x="-20" y="95" width="277" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Job Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LjL-SN-mrt" userLabel="jobTitle">
+                                        <rect key="frame" x="-20" y="120" width="277" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="28z-E6-pg5" userLabel="Third Card View">
+                                <rect key="frame" x="562" y="98" width="236" height="370"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Github" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1U3-8f-veB" userLabel="gitLabel">
+                                        <rect key="frame" x="25" y="165" width="186" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="github username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmd-jL-A6K" userLabel="gitName">
+                                        <rect key="frame" x="25" y="185" width="271" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6P-Ny-Ofb" userLabel="emailLabel">
+                                        <rect key="frame" x="25" y="218" width="109" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyT-JB-pX0" userLabel="emailAddress">
+                                        <rect key="frame" x="25" y="238" width="117" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Achievements" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45p-Xg-L1D" userLabel="achievementsLabel">
+                                        <rect key="frame" x="25" y="270" width="109" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tom Lee" translatesAutoresizingMaskIntoConstraints="NO" id="n9A-hP-p3p" userLabel="classmatePhotoImage">
+                                        <rect key="frame" x="85" y="18" width="66" height="66"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Classmate Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9u-MW-ybQ" userLabel="classmateName">
+                                        <rect key="frame" x="-20" y="95" width="277" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Job Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bE6-Ld-i77" userLabel="jobTitle">
+                                        <rect key="frame" x="-20" y="120" width="277" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Gj-o6-URy" userLabel="Fourth Card View">
+                                <rect key="frame" x="-218" y="98" width="236" height="370"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Github" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZY-Y7-JMe" userLabel="gitLabel">
+                                        <rect key="frame" x="25" y="165" width="186" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="github username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rm-4h-zGP" userLabel="gitName">
+                                        <rect key="frame" x="25" y="185" width="271" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdt-vZ-PeP" userLabel="emailLabel">
+                                        <rect key="frame" x="25" y="218" width="109" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jng-ug-Ycw" userLabel="emailAddress">
+                                        <rect key="frame" x="25" y="238" width="117" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Achievements" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb3-6H-6hc" userLabel="achievementsLabel">
+                                        <rect key="frame" x="25" y="270" width="109" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tom Lee" translatesAutoresizingMaskIntoConstraints="NO" id="ZWg-dN-i3L" userLabel="classmatePhotoImage">
+                                        <rect key="frame" x="85" y="18" width="66" height="66"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Classmate Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfT-6f-WHi" userLabel="classmateName">
+                                        <rect key="frame" x="-20" y="95" width="277" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Job Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1u-5d-LxY" userLabel="jobTitle">
+                                        <rect key="frame" x="-20" y="120" width="277" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="YmH-Og-g9k" secondAttribute="trailing" constant="-16" id="2cA-Mz-u9x"/>
+                            <constraint firstItem="YmH-Og-g9k" firstAttribute="top" secondItem="WZT-zI-fms" secondAttribute="topMargin" id="LPf-TA-Fwl"/>
+                            <constraint firstItem="YmH-Og-g9k" firstAttribute="leading" secondItem="WZT-zI-fms" secondAttribute="leadingMargin" constant="-16" id="O0u-Bs-UN4"/>
+                            <constraint firstItem="SoM-6k-bPl" firstAttribute="top" secondItem="YmH-Og-g9k" secondAttribute="bottom" id="vk9-uC-HHv"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="achievementsLabel" destination="3rc-4F-fai" id="FgB-oy-ZR4"/>
+                        <outlet property="classmateJobTitle" destination="Spd-7F-2zW" id="fI0-mm-S7R"/>
+                        <outlet property="classmateName" destination="iYL-oa-V16" id="RaV-mD-EJX"/>
+                        <outlet property="classmatePhotoImage" destination="foR-sY-zug" id="Nak-J7-OLF"/>
+                        <outlet property="emailAddress" destination="RXY-Zf-xdo" id="bBd-YR-Wy4"/>
+                        <outlet property="emailLabel" destination="Nwm-Be-8u6" id="DIq-bR-FQZ"/>
+                        <outlet property="firstCard" destination="78K-fk-9Oo" id="KGv-Uc-m2a"/>
+                        <outlet property="fourthCard" destination="8Gj-o6-URy" id="xVh-ZS-eSE"/>
+                        <outlet property="githubLabel" destination="DP0-sO-ewm" id="6zj-ey-cIF"/>
+                        <outlet property="githubUsername" destination="xIE-aL-Ga3" id="l9w-rl-cwk"/>
+                        <outlet property="overlayBackground" destination="YmH-Og-g9k" id="wdT-hO-Qng"/>
+                        <outlet property="secondCard" destination="QCj-jd-pms" id="7U1-Ou-MT2"/>
+                        <outlet property="thirdCard" destination="28z-E6-pg5" id="Nhw-V7-xyn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uum-hP-MRu" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0BX-KD-fbZ">
+                    <connections>
+                        <action selector="onTapClose:" destination="Uqo-vz-Eyg" id="vMi-3H-6yt"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="334" y="2317"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Login_CodepathLogo" width="184" height="23"/>
         <image name="Login_NextButton" width="135" height="135"/>
         <image name="Login_Sign in with Github" width="352" height="53"/>
+        <image name="Tom Lee" width="45" height="45"/>
+        <image name="android_icon" width="60" height="70"/>
         <image name="banner_android-engineers" width="375" height="150"/>
         <image name="cell_padding" width="1" height="15"/>
+        <image name="close" width="25" height="24"/>
         <image name="close_button" width="25" height="25"/>
+        <image name="close_grey_button" width="25" height="25"/>
+        <image name="ios_icon" width="60" height="70"/>
         <image name="logo" width="92" height="12"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
