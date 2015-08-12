@@ -13,6 +13,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var feedTableView: UITableView!
     @IBOutlet weak var topbarView: UIView!
     
+    var selectedEventView: UIImageView!
+    
     var backgroundGray = UIColor(red: 244/255, green: 246/255, blue: 248/255, alpha: 1)
     var codepathBlue = UIColor(red: 50/255, green: 68/255, blue: 82/255, alpha: 1)
     
@@ -33,8 +35,50 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         "Use your existing skills to master Swift",
         "In this workshop we will focus on learning the debugging concepts, approaches, and tools used by professional app developers in day-to-day work."]
     
+    var feedItems : [Feed]! = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        // manually sets up data elements to have values (DELETE THIS when Parse is connected)
+        var event1 = Event()
+        event1.title = titles[0]
+        event1.byline = descriptions[0]
+        event1.content = "This bootcamp empowers designers to modify the view and animation related code for iOS Swift prototypes as well as production apps. There is a focus on views, navigation, transitions, and animations. It omits advanced topics, such as networking, threading, models, and device frameworks for accessing the camera and location."
+
+        var feedItem1 = Feed()
+        feedItem1.event = event1
+        
+        var event2 = Event()
+        event2.title = titles[1]
+        event2.byline = descriptions[1]
+        event2.content = "This placeholder text empowers designers to modify the view and animation related code for iOS Swift prototypes as well as production apps. There is a focus on views, navigation, transitions, and animations. It omits advanced topics, such as networking, threading, models, and device frameworks for accessing the camera and location."
+        
+        var feedItem2 = Feed()
+        feedItem2.event = event2
+        
+        var event3 = Event()
+        event3.title = titles[2]
+        event3.byline = descriptions[2]
+        event3.content = "This placeholder text empowers designers to modify the view and animation related code for iOS Swift prototypes as well as production apps. There is a focus on views, navigation, transitions, and animations. It omits advanced topics, such as networking, threading, models, and device frameworks for accessing the camera and location."
+        
+        var feedItem3 = Feed()
+        feedItem3.event = event3
+        
+        var event4 = Event()
+        event4.title = titles[3]
+        event4.byline = descriptions[3]
+        event4.content = "This placeholder text empowers designers to modify the view and animation related code for iOS Swift prototypes as well as production apps. There is a focus on views, navigation, transitions, and animations. It omits advanced topics, such as networking, threading, models, and device frameworks for accessing the camera and location."
+        
+        var feedItem4 = Feed()
+        feedItem4.event = event4
+        
+        feedItems.append(feedItem1)
+        feedItems.append(feedItem2)
+        feedItems.append(feedItem3)
+        feedItems.append(feedItem4)
+        
         
         topbarView.backgroundColor = codepathBlue
         
@@ -56,7 +100,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return banners.count
+        return feedItems.count
+        
     }
     
     
@@ -76,6 +121,34 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
         
     }
+
+
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+
+        var feedItem = feedItems[indexPath.row]
+        
+        if feedItem.event != nil {
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.performSegueWithIdentifier("eventSegue", sender: feedItem.event)
+            })
+            
+        } else if feedItem.cohort != nil {
+            
+            performSegueWithIdentifier("courseSegue", sender: feedItem.event)
+            
+        }
+    }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if sender is Event {
+                        
+            var event = sender as! Event
+            var eventViewController = segue.destinationViewController as! EventViewController
+            eventViewController.event = event
+        }
+        
+    }
 }
 

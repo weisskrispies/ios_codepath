@@ -22,6 +22,6 @@ class Feed: PFObject, PFSubclassing {
         return "Feed"
     }
     
-    @NSManaged var event : Event
-    @NSManaged var cohort : Cohort
+    @NSManaged var event : Event?
+    @NSManaged var cohort : Cohort?
 }

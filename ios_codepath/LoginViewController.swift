@@ -102,6 +102,7 @@ class LoginViewController: UIViewController {
             
             self.topMargin.constant = self.visibleHeightCenter - 100
             self.view.layoutIfNeeded()
+            self.userNameLabelUp()
             
             }) { (finished:Bool) -> Void in
         }
@@ -252,7 +253,6 @@ class LoginViewController: UIViewController {
         animateFieldsUp()
         showPasswordField()
         skipButtonUp()
-        userNameLabelUp()
         
     }
     

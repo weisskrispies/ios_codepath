@@ -25,4 +25,24 @@ class Event: PFObject, PFSubclassing {
     @NSManaged var type : String
     @NSManaged var meetupId : String
     @NSManaged var date : NSDate
+    @NSManaged var title : String
+    @NSManaged var byline : String
+    @NSManaged var content : String
+    
+    var headerImage : UIImage {
+        get {
+            if title == "iOS for Designers" {
+                return UIImage(named: "banner_ios-designers")!
+            } else if title == "iOS for Engineers" {
+                return UIImage(named: "banner_ios-engineers")!
+            } else if title == "Android for Engineers" {
+                return UIImage(named: "banner_android-engineers")!
+            } else if title == "Android Debugging Workshop" {
+                return UIImage(named: "banner_workshop")!
+            } else {
+                return UIImage(named: "banner_workshop")!
+            }
+            
+        }
+    }
 }
