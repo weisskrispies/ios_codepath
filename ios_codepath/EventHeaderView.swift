@@ -16,6 +16,9 @@ class EventHeaderView: UIView {
     @IBOutlet weak var eventBylineLabel: UILabel!
     @IBOutlet weak var eventMonthLabel: UILabel!
     @IBOutlet weak var eventDayLabel: UILabel!
+    @IBOutlet weak var closeButton: UIButton!
+    
+    weak var eventViewController : EventViewController!
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -36,18 +39,15 @@ class EventHeaderView: UIView {
         contentView.autoresizingMask = UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleWidth
         addSubview(contentView)
         
-// Not sure how to pass the data to this Header type
-//        eventTitleLabel.text = event.title
-//        eventBylineLabel.text = event.byline
-        
-//        eventTitleLabel.preferredMaxLayoutWidth = eventTitleLabel.frame.size.width
-//        eventBylineLabel.preferredMaxLayoutWidth = eventBylineLabel.frame.size.width
-        
-        
-        // custom initialization logic
 
     }
     
+    @IBAction func onTapToDismiss(sender: AnyObject) {
+        
+        eventViewController.didTapToDismiss(sender)
+        
+    }
+
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

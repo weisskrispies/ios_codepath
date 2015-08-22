@@ -13,6 +13,9 @@ class FeedCell : UITableViewCell {
     @IBOutlet weak var feedImageView: UIImageView!
     @IBOutlet weak var feedTitleLabel: UILabel!
     @IBOutlet weak var feedDescriptionLabel: UILabel!
+    @IBOutlet weak var dateMonth: UILabel!
+    @IBOutlet weak var dateDay: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

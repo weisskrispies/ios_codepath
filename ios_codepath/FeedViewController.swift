@@ -13,7 +13,10 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var feedTableView: UITableView!
     @IBOutlet weak var topbarView: UIView!
     
-    var selectedEventView: UIImageView!
+    var selectedEventImageView: UIImageView!
+    
+    var expandTransition: ExpandTransition!
+    var isPresenting: Bool = true
     
     var backgroundGray = UIColor(red: 244/255, green: 246/255, blue: 248/255, alpha: 1)
     var codepathBlue = UIColor(red: 50/255, green: 68/255, blue: 82/255, alpha: 1)
@@ -33,7 +36,18 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         "Use your existing skills to master Java",
         "Learn swift basics to prototypes in code",
         "Use your existing skills to master Swift",
-        "In this workshop we will focus on learning the debugging concepts, approaches, and tools used by professional app developers in day-to-day work."]
+        "Debugging concepts, approaches, and tools"]
+    var dateMonth: [String!] = [
+        "July",
+        "Sept",
+        "Sept",
+        "Sept"]
+    var dateDay: [String!] = [
+        "02",
+        "14",
+        "14",
+        "14"]
+    
     
     var feedItems : [Feed]! = []
     
@@ -46,6 +60,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         event1.title = titles[0]
         event1.byline = descriptions[0]
         event1.content = "This bootcamp empowers designers to modify the view and animation related code for iOS Swift prototypes as well as production apps. There is a focus on views, navigation, transitions, and animations. It omits advanced topics, such as networking, threading, models, and device frameworks for accessing the camera and location."
+        event1.dateMonth = dateMonth[0]
+        event1.dateDay = dateDay[0]
 
         var feedItem1 = Feed()
         feedItem1.event = event1
@@ -54,6 +70,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         event2.title = titles[1]
         event2.byline = descriptions[1]
         event2.content = "This placeholder text empowers designers to modify the view and animation related code for iOS Swift prototypes as well as production apps. There is a focus on views, navigation, transitions, and animations. It omits advanced topics, such as networking, threading, models, and device frameworks for accessing the camera and location."
+        event1.dateMonth = dateMonth[1]
+        event1.dateDay = dateDay[1]
         
         var feedItem2 = Feed()
         feedItem2.event = event2
@@ -62,6 +80,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         event3.title = titles[2]
         event3.byline = descriptions[2]
         event3.content = "This placeholder text empowers designers to modify the view and animation related code for iOS Swift prototypes as well as production apps. There is a focus on views, navigation, transitions, and animations. It omits advanced topics, such as networking, threading, models, and device frameworks for accessing the camera and location."
+        event1.dateMonth = dateMonth[2]
+        event1.dateDay = dateDay[2]
         
         var feedItem3 = Feed()
         feedItem3.event = event3
@@ -70,6 +90,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         event4.title = titles[3]
         event4.byline = descriptions[3]
         event4.content = "This placeholder text empowers designers to modify the view and animation related code for iOS Swift prototypes as well as production apps. There is a focus on views, navigation, transitions, and animations. It omits advanced topics, such as networking, threading, models, and device frameworks for accessing the camera and location."
+        event1.dateMonth = dateMonth[3]
+        event1.dateDay = dateDay[3]
         
         var feedItem4 = Feed()
         feedItem4.event = event4
@@ -113,6 +135,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.feedImageView.image = UIImage(named: banners[indexPath.row])
         cell.feedTitleLabel.text = titles[indexPath.row]
         cell.feedDescriptionLabel.text = descriptions[indexPath.row]
+        cell.dateMonth.text = dateMonth[indexPath.row]
+        cell.dateDay.text = dateDay[indexPath.row]
         println(cell.frame.size)
         //cell.contentView.frame = cell.bounds
         //cell.contentView.autoresizingMask = .FlexibleWidth | .FlexibleHeight
@@ -142,11 +166,28 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
+        var fromViewController = segue.sourceViewController as! UIViewController
+        var toViewController = segue.sourceViewController as! UIViewController
+        var identifier = segue.identifier
+        
+
+        
         if sender is Event {
                         
             var event = sender as! Event
             var eventViewController = segue.destinationViewController as! EventViewController
+            var identifier = segue.identifier
+            
             eventViewController.event = event
+
+// trying to figure out how to access the background image in the cell and assign it to selectedEventImageView so it can be passed
+//            selectedEventImageView = event.feedImageView.image
+            
+            println("we got this image \(selectedEventImageView)")
+            
+            expandTransition = ExpandTransition()
+            eventViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
+            eventViewController.transitioningDelegate = expandTransition
         }
         
     }

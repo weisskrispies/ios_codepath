@@ -24,10 +24,12 @@ class Event: PFObject, PFSubclassing {
     
     @NSManaged var type : String
     @NSManaged var meetupId : String
-    @NSManaged var date : NSDate
+    @NSManaged var dateMonth : String
+    @NSManaged var dateDay : String
     @NSManaged var title : String
     @NSManaged var byline : String
     @NSManaged var content : String
+    @NSManaged var numberAttending : Int
     
     var headerImage : UIImage {
         get {

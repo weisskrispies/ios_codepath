@@ -39,6 +39,9 @@
 		3932BD481B78092E00C045E4 /* EventHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3932BD471B78092E00C045E4 /* EventHeaderView.xib */; };
 		3932BD4A1B780B9D00C045E4 /* EventHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3932BD491B780B9D00C045E4 /* EventHeaderView.swift */; };
 		3932BD4C1B7985E600C045E4 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3932BD4B1B7985E600C045E4 /* EventCell.swift */; };
+		395D52B51B863FC500980553 /* ExpandTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395D52B41B863FC500980553 /* ExpandTransition.swift */; };
+		395D52B71B863FE800980553 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395D52B61B863FE800980553 /* FadeTransition.swift */; };
+		395D52B91B86401F00980553 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395D52B81B86401F00980553 /* BaseTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +91,9 @@
 		3932BD471B78092E00C045E4 /* EventHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventHeaderView.xib; sourceTree = "<group>"; };
 		3932BD491B780B9D00C045E4 /* EventHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventHeaderView.swift; sourceTree = "<group>"; };
 		3932BD4B1B7985E600C045E4 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		395D52B41B863FC500980553 /* ExpandTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandTransition.swift; sourceTree = "<group>"; };
+		395D52B61B863FE800980553 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		395D52B81B86401F00980553 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
 		739718EE5CB351F4BE1FFF48 /* Pods-ios_codepath.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_codepath.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios_codepath/Pods-ios_codepath.debug.xcconfig"; sourceTree = "<group>"; };
 		959424332EA17F8CE8C7271A /* Pods-ios_codepath.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_codepath.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios_codepath/Pods-ios_codepath.release.xcconfig"; sourceTree = "<group>"; };
 		AAD36AEAA9D946CA8CB19319 /* libPods-ios_codepath.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ios_codepath.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +188,7 @@
 		22B6805D1B6B0FD900963A42 /* ios_codepath */ = {
 			isa = PBXGroup;
 			children = (
+				395D52B31B863E0300980553 /* Transitions */,
 				22439CCA1B70470E0017E76B /* Views */,
 				22439CC91B7047020017E76B /* View Controllers */,
 				22439CB81B7045470017E76B /* Models */,
@@ -218,6 +225,16 @@
 				22B680751B6B0FDA00963A42 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		395D52B31B863E0300980553 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				395D52B41B863FC500980553 /* ExpandTransition.swift */,
+				395D52B81B86401F00980553 /* BaseTransition.swift */,
+				395D52B61B863FE800980553 /* FadeTransition.swift */,
+			);
+			name = Transitions;
 			sourceTree = "<group>";
 		};
 		4342C7ED138DE33DB600DE60 /* Frameworks */ = {
@@ -378,6 +395,7 @@
 				22439CC01B7045D80017E76B /* Topic.swift in Sources */,
 				22439CC81B7046160017E76B /* Rating.swift in Sources */,
 				22A8AD511B769EA40058C2BB /* ViewController.swift in Sources */,
+				395D52B91B86401F00980553 /* BaseTransition.swift in Sources */,
 				3932BD461B77C21A00C045E4 /* EventViewController.swift in Sources */,
 				22439CC61B70460F0017E76B /* CheckIn.swift in Sources */,
 				22A8AD571B769EAE0058C2BB /* ProfileViewController.swift in Sources */,
@@ -388,12 +406,14 @@
 				22439CC41B7045F60017E76B /* CourseRecord.swift in Sources */,
 				22A8AD621B7711BC0058C2BB /* ClassmatesViewController.swift in Sources */,
 				22439CBA1B7045830017E76B /* Feed.swift in Sources */,
+				395D52B51B863FC500980553 /* ExpandTransition.swift in Sources */,
 				22439CCC1B704F4A0017E76B /* User.swift in Sources */,
 				22A8AD5B1B769EB40058C2BB /* CourseCell.swift in Sources */,
 				22B680611B6B0FD900963A42 /* AppDelegate.swift in Sources */,
 				22A8AD4D1B769D0E0058C2BB /* FeedViewController.swift in Sources */,
 				22A8AD591B769EAE0058C2BB /* CourseOverviewViewController.swift in Sources */,
 				3932BD4C1B7985E600C045E4 /* EventCell.swift in Sources */,
+				395D52B71B863FE800980553 /* FadeTransition.swift in Sources */,
 				3932BD4A1B780B9D00C045E4 /* EventHeaderView.swift in Sources */,
 				22FED8231B769ACD00CE81BD /* LoginViewController.swift in Sources */,
 				22A8AD5F1B7711B40058C2BB /* classmateDetailViewController.swift in Sources */,
